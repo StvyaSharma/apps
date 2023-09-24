@@ -1,0 +1,95 @@
+/* .SearchBar {
+    margin-inline: auto;
+    font-size: 1.5rem;
+    border: none;
+}
+.SearchBar:focus .SearchBar:focus-visible{
+    border: none;
+    outline: none !important;
+} */
+.SearchBarParent{
+    text-align: center;
+}
+.SearchBar {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #24292e;
+    background-color: rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 90%;
+    margin-block: 20px;
+    margin-inline: auto;
+    width: 100%;
+    color: var(--label);
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .SearchBar:focus {
+    outline: none;
+    border-color: #0366d6;
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.1);
+  }
+
+
+
+
+
+
+        .searchGrid {
+            display: grid;
+            grid-gap: 10px; /* Adjust the gap between grid items */
+            grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 columns by default */
+            max-width: 100%; /* Ensure the grid doesn't exceed the screen width */
+            margin: 20 auto; /* Center the grid horizontally */ 
+            align-content: stretch; 
+        }
+
+        /* Style for grid items */
+        .searchGridItem {
+            max-width: 300px; /* Maximum width for each grid item */
+            margin: 0 auto; /* Center the grid items horizontally */
+            width: 100%;
+            box-shadow: rgba(140, 149, 159, 0.15) 0px 3px 6px 0px;
+            padding: 16px;
+            border: 1px solid  rgb(216, 222, 228);
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+        .searchGridItem:hover{
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+        }
+
+        .searchGridItem>p{
+            color: var(--secondaryLabel);
+            font-size: 0.7rem;
+        }
+        
+        /* Media queries for responsive layout */
+        @media (max-width: 1200px) {
+            .searchGrid {
+                grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 columns on smaller screens */
+            }
+        }
+
+        @media (max-width: 900px) {
+            .searchGrid {
+                grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columns on even smaller screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .searchGrid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns on very small screens */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .searchGrid {
+                grid-template-columns: 1fr; /* 1 column on the smallest screens */
+            }
+        }

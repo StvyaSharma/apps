@@ -83,16 +83,18 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    background-color: var(--systemBackground);
 }
 
 a {
@@ -104,4 +106,113 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+/* Light theme variables */
+:root {
+  /* Background colors */
+  --systemBackground: #FFFFFFFF;
+  --secondarySystemBackground: #F2F2F7FF;
+  --tertiarySystemBackground: #FFFFFFFF;
+  --systemGroupedBackground: #F2F2F7FF;
+  --secondarySystemGroupedBackground: #FFFFFFFF;
+  --tertiarySystemGroupedBackground: #F2F2F7FF;
+
+  /* Label colors */
+  --label: #000000FF;
+  --secondaryLabel: #3C3C4399;
+  --tertiaryLabel: #3C3C434D;
+  --quaternaryLabel: #3C3C432E;
+
+  /* Placeholder text color */
+  --placeholderText: #3C3C434D;
+
+  /* Separator colors */
+  --separator: #3C3C434A;
+  --opaqueSeparator: #C6C6C8FF;
+
+  /* Tint colors */
+  --systemBlue: #007AFFFF;
+  --systemGreen: #34C759FF;
+  --systemIndigo: #5856D6FF;
+  --systemOrange: #FF9500FF;
+  --systemPink: #FF2D55FF;
+  --systemPurple: #AF52DEFF;
+  --systemRed: #FF3B30FF;
+  --systemTeal: #5AC8FAFF;
+  --systemYellow: #FFCC00FF;
+
+  /* Gray colors */
+  --systemGray: #8E8E93FF;
+  --systemGray2: #AEAEB2FF;
+  --systemGray3: #C7C7CCFF;
+  --systemGray4: #D1D1D6FF;
+  --systemGray5: #E5E5EAFF;
+  --systemGray6: #F2F2F7FF;
+
+  /* Add other colors here */
+}
+
+/* Dark theme variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+      /* Background colors */
+      --systemBackground: #000000FF;
+      --secondarySystemBackground: #1C1C1EFF;
+      --tertiarySystemBackground: #2C2C2EFF;
+      --systemGroupedBackground: #000000FF;
+      --secondarySystemGroupedBackground: #1C1C1EFF;
+      --tertiarySystemGroupedBackground: #2C2C2EFF;
+
+      /* Label colors */
+      --label: #FFFFFFFF;
+      --secondaryLabel: #EBEBF599;
+      --tertiaryLabel: #EBEBF54D;
+      --quaternaryLabel: #EBEBF52E;
+
+      /* Placeholder text color */
+      --placeholderText: #EBEBF54D;
+
+      /* Separator colors */
+      --separator: #54545899;
+      --opaqueSeparator: #38383AFF;
+
+      /* Tint colors */
+      --systemBlue: #0A84FFFF;
+      --systemGreen: #30D158FF;
+      --systemIndigo: #5E5CE6FF;
+      --systemOrange: #FF9F0AFF;
+      --systemPink: #FF375FFF;
+      --systemPurple: #BF5AF2FF;
+      --systemRed: #FF453AFF;
+      --systemTeal: #64D2FFFF;
+      --systemYellow: #FFD60AFF;
+
+      /* Gray colors */
+      --systemGray: #8E8E93FF;
+      --systemGray2: #636366FF;
+      --systemGray3: #48484AFF;
+      --systemGray4: #3A3A3CFF;
+      --systemGray5: #2C2C2EFF;
+      --systemGray6: #1C1C1EFF;
+
+      /* Add other dark colors here */
+  }
+}
+
+
+/* Spinner.css */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #007bff; /* Change the color to match your design */
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -1,0 +1,55 @@
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.grid-item {
+    padding: 20px;
+    aspect-ratio: 1;
+    background-color: var(--tertiarySystemBackground);
+    color:var(--secondaryLabel);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    transition: 0.3s;
+    object-fit: contain;
+    width: 100%;
+
+}
+
+.grid-item > h3 {
+    color: var(--label);
+}
+
+.grid-item:hover {
+    box-shadow: var(--placeholderText) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.grid-item:hover  .grid-subitem {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(1);
+}
+
+@media (max-width: 1050px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+    }
+}
+@media (max-width: 750px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+}
+
